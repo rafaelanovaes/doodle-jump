@@ -51,7 +51,7 @@ SCORE_FONT = pygame.font.SysFont("comicsans", 30)
 font_name = pygame.font.match_font('VT323')
 
 #Função que gera as plataformas de forma aleatória
-plates = [Plat(random.randrange(0, WIN_WIDTH), random.randrange(0, WIN_HEIGHT - 4)) for i in range(7)]
+plates = [Plat(random.randrange(0, WIN_WIDTH), random.randrange(0, WIN_HEIGHT - 4)) for i in range(10)]
 
 #Inicializando variáveis
 x = 100                  #Dimensão dos objetos
