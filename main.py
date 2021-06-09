@@ -9,11 +9,9 @@ WIN_WIDTH = 400
 WIN_HEIGHT = 533
 
 #Carregando as imagens pro jogo
-BASE_PATH = os.path.abspath(".") # Caminho global
-IMG_PATH = os.path.join(BASE_PATH, "images")
-BG_IMG = pygame.image.load(os.path.join(IMG_PATH, "cenarioPyGame.png"))
-DOODLE_IMG = pygame.image.load(os.path.join(IMG_PATH, "DoodleEngineer.png"))
-PLAT_IMG = pygame.image.load(os.path.join(IMG_PATH, "Plat_4.png"))
+BG_IMG = pygame.image.load(os.path.join("images", "cenarioPyGame.png"))
+DOODLE_IMG = pygame.image.load(os.path.join("images", "DoodleEngineer.png"))
+PLAT_IMG = pygame.image.load(os.path.join("images", "Plat_4.png"))
 
 #Definindo as plataformas em função para facilitar a repetição das mesmas
 class Plat:
@@ -91,11 +89,11 @@ while True:
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
         x -= 3
-        DOODLE_IMG = pygame.image.load(os.path.join(IMG_PATH, "DoodleEngineer.png"))
+        DOODLE_IMG = pygame.image.load(os.path.join("images", "DoodleEngineer.png"))
     if keys[pygame.K_RIGHT]:
         x += 3
         #Fazendo o flip na imagem do doodle para que quando a tecla for pressionada a sprite vire também
-        DOODLE_IMG = pygame.transform.flip(pygame.image.load(os.path.join(IMG_PATH, "DoodleEngineer.png")), True, False)
+        DOODLE_IMG = pygame.transform.flip(pygame.image.load(os.path.join("images", "DoodleEngineer.png")), True, False)
 
     if y < h:
         y = h
